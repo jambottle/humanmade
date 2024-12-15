@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import React from "react";
 
 import { pretendard } from "@/app/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${pretendard.variable} antialiased`}>
+      <body
+        className={cn(pretendard.variable, "font-pretendard tracking-tight")}
+      >
         {children}
         <Analytics />
       </body>
